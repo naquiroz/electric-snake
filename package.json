@@ -13,5 +13,17 @@
     "electron": "^2.0.4",
     "eslint": "^5.1.0",
     "eslint-config-google": "^0.9.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naquiroz/electric-snake.git"
+  },
+  "keywords": [
+    "electron",
+    "python"
+  ],
+  "bugs": {
+    "url": "https://github.com/naquiroz/electric-snake/issues"
+  },
+  "homepage": "https://github.com/naquiroz/electric-snake#readme"
 }

@@ -1,13 +1,21 @@
-const {app, BrowserWindow} = require('electron');
+const bridge = require('./login/bridge')
+const electron = require('electron')
 
-/** @description Makes de user window.
+/** @description Makes e user window.
  */
-function createWindow() {
+function createWindow () {
   // Create the browser window.
-  win = new BrowserWindow({width: 800, height: 600});
+  bridge.spawnPython()
+  var win = new electron.BrowserWindow({width: 800,
+    height: 600})
 
   // and load the index.html of the app.
-  win.loadFile('index.html');
+  win.loadFile('index.html')
+  // ESLint will warn about any use of eval(), even this one
+  // eslint-disable-next-line
+  win.eval = global.eval = function () {
+    throw new Error(`Sorry, this app does not support window.eval().`)
+  }
 }
 
-app.on('ready', createWindow);
+electron.app.on('ready', createWindow)

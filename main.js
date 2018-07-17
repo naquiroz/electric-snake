@@ -5,10 +5,8 @@ const electron = require('electron')
  */
 function createWindow () {
   // Create the browser window.
-  bridge.spawnPython()
   var win = new electron.BrowserWindow({width: 800,
     height: 600})
-
   // and load the index.html of the app.
   win.loadFile('index.html')
   // ESLint will warn about any use of eval(), even this one
@@ -18,4 +16,9 @@ function createWindow () {
   }
 }
 
+// function killBackend () {
+// python.kill('SIGINT')
+// }
 electron.app.on('ready', createWindow)
+electron.app.on('ready', bridge.spawnPython)
+electron.app.on('window-all-closed', bridge.killPython)

@@ -5,15 +5,24 @@ Personal Electron project, meant for exploring the use of python within electron
 First the requirements are:
 1. Linux (Tested in ubuntu 18.04)
 2. nodejs (latest)
-
-Python isn't required as venv is included, for building and packaging purposes.
+3. Python 3.6 or later
 
 To run:
-1. Install the required modules.
+
+1. Make python virtual environment and install the requirements.txt
+
+```bash
+python3 -m venv venv/
+source ./venv/bin/python3
+pip install < requirements.txt
+deactivate
+```
+
+2. Install the required modules.
 ```bash
 npm install
 ```
-2. Start the app!
+3. Start the app!
 ```bash
 npm start
 ```

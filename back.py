@@ -5,10 +5,8 @@
 from socket import socket, AF_INET, SOCK_STREAM
 from logging import getLogger, StreamHandler, Formatter, DEBUG, Logger
 from threading import Thread, Event
-import time
 import json
 import sys
-import atexit
 
 __author__ = 'Nicolas Quiroz'
 

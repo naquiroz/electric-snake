@@ -10,11 +10,11 @@
   "author": "Nicolas Quiroz",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^2.0.4",
-    "eslint": "^5.1.0",
+    "electron": "^2.0.8",
+    "eslint": "^5.4.0",
     "eslint-config-google": "^0.9.1",
     "eslint-config-standard": "^11.0.0",
-    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.8.0",
     "eslint-plugin-standard": "^3.1.0"
@@ -33,6 +33,6 @@
   "homepage": "https://github.com/naquiroz/electric-snake#readme",
   "dependencies": {
     "intellisense": "0.0.1",
-    "jshint": "^2.9.5"
+    "jshint": "^2.9.6"
   }
 }
